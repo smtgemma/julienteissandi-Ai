@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  app:
+    build: ./
+    container_name: juliant
+    ports:
+      - "2000:2000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
